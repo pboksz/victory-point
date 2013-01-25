@@ -1,0 +1,15 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: luna_development
+  username: luna
+  password:
+  host: localhost
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: luna_test
+  username: luna
+  password:
+  host: localhost
