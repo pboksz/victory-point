@@ -1,1 +1,1 @@
-class VP.Routers.Users extends Backbone.Router
+class BRP.Routers.Users extends Backbone.Router

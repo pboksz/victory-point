@@ -1,4 +1,4 @@
-VictoryPoint::Application.routes.draw do
+BaseRailsProject::Application.routes.draw do
   devise_for :users
 
   root :to => 'home#index'

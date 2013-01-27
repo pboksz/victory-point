@@ -1,4 +1,4 @@
-window.VP =
+window.BRP =
   Models: {}
   Collections: {}
   Views: {}
@@ -6,4 +6,4 @@ window.VP =
   initialize: -> alert 'Hello from Backbone!'
 
 $(document).ready ->
-  VP.initialize()
+  BRP.initialize()

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-VictoryPoint::Application.load_tasks
+BaseRailsProject::Application.load_tasks
