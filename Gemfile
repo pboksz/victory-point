@@ -25,7 +25,6 @@ group :test do
   gem 'capybara-webkit' # for js specs in rails views
   gem 'database_cleaner' # for clearing the database before and after specs
   gem 'factory_girl' # for creating models in specs
-  gem 'mocha' # for stubbing in specs
   gem 'shoulda' # more advanced matchers
 end
 
