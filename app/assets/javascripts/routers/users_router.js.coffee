@@ -1,1 +1,1 @@
-class VictoryPnt.Routers.Users extends Backbone.Router
+class VP.Routers.Users extends Backbone.Router

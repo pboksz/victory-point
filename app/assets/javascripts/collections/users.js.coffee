@@ -1,3 +1,2 @@
-class VictoryPnt.Collections.Users extends Backbone.Collection
-
-  model: VictoryPnt.Models.User
+class VP.Collections.Users extends Backbone.Collection
+  model: VP.Models.User

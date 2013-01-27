@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-VictoryPnt::Application.load_tasks
+VictoryPoint::Application.load_tasks
