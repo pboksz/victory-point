@@ -32,8 +32,7 @@ group :developement, :test do
   gem 'bullet' # for checking N+1 queries, counter caching, and eager loading
   gem 'capistrano' # for running deploy scripts
   gem 'foreman' # for managing heroku
-  gem 'jasmine'  # js specs
-  gem 'jasminerice' # for coffeescript specs
+  gem 'jasminerice' # for coffeescript specs in rails
   gem 'rspec-rails' # respec for rails
   gem 'spork-rails' # for quickly running spec on a dedicated port
 end
