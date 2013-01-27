@@ -61,5 +61,8 @@ module VictoryPnt
 
     # for fixing weird Heroku issues
     config.assets.initialize_on_precompile = false
+
+    # for creating rspec specs instead of test on rail generate
+    config.generators.test_framework = :rspec
   end
 end
