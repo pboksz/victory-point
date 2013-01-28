@@ -23,7 +23,6 @@ end
 group :test do
   gem 'capybara' # for integration specs that require interacting with rails views
   gem 'database_cleaner' # for clearing the database before and after specs
-  gem 'factory_girl_rails' # for creating models in specs
 end
 
 group :development do
@@ -33,6 +32,7 @@ end
 
 group :development, :test do
   gem 'capistrano' # for running deploy scripts
+  gem 'factory_girl_rails' # for creating models in specs
   gem 'jasminerice' # for coffeescript specs in rails
   gem 'rspec-rails' # respec for rails
   gem 'spork-rails' # for quickly running spec on a dedicated port

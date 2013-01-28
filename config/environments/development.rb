@@ -37,7 +37,8 @@ BaseRailsProject::Application.configure do
 
   config.after_initialize do
     # Uncomment the next line to test queries in your development environment
-    # Bullet.enable = true
+    #Bullet.enable = true
+    Bullet.bullet_logger = true
     Bullet.console = true
   end
 end

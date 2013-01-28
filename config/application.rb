@@ -63,6 +63,9 @@ module BaseRailsProject
     config.assets.initialize_on_precompile = false
 
     # for creating rspec specs instead of test on rail generate
-    config.generators.test_framework = :rspec
+    config.generators.test_framework :rspec
+
+    # for automatically creating factory girl fixtures
+    config.generators.fixture_replacement :factory_girl
   end
 end
