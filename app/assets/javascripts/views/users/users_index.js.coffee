@@ -1,3 +1,3 @@
-class BRP.Views.UsersIndex extends Backbone.View
+class VP.Views.UsersIndex extends Backbone.View
 
   template: JST['users/index']

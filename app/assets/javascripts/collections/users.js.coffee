@@ -1,2 +1,2 @@
-class BRP.Collections.Users extends Backbone.Collection
-  model: BRP.Models.User
+class VP.Collections.Users extends Backbone.Collection
+  model: VP.Models.User

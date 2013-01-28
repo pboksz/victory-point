@@ -1,1 +1,1 @@
-class BRP.Models.User extends Backbone.Model
+class VP.Models.User extends Backbone.Model

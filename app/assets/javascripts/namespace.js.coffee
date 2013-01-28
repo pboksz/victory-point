@@ -1,4 +1,4 @@
-window.BRP =
+window.VP =
   Models: {}
   Collections: {}
   Views: {}
