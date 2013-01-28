@@ -22,16 +22,17 @@ end
 
 group :test do
   gem 'capybara' # for integration specs that require interacting with rails views
-  gem 'capybara-webkit' # for js specs in rails views
   gem 'database_cleaner' # for clearing the database before and after specs
-  gem 'factory_girl' # for creating models in specs
-  gem 'shoulda' # more advanced matchers
+  gem 'factory_girl_rails' # for creating models in specs
 end
 
-group :developement, :test do
-  gem 'bullet' # for checking N+1 queries, counter caching, and eager loading
+group :development do
+  gem 'better_errors' # for showing more detailed error pages
+  gem 'bullet' # for checking N+1 queries, counter caching, and eager loading, turn on after you get stuff going
+end
+
+group :development, :test do
   gem 'capistrano' # for running deploy scripts
-  gem 'foreman' # for managing heroku
   gem 'jasminerice' # for coffeescript specs in rails
   gem 'rspec-rails' # respec for rails
   gem 'spork-rails' # for quickly running spec on a dedicated port

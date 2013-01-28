@@ -34,4 +34,10 @@ BaseRailsProject::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.after_initialize do
+    # Uncomment the next line to test queries in your development environment
+    # Bullet.enable = true
+    Bullet.console = true
+  end
 end
