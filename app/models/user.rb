@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
+
+  def gravatar_url
+    "http://www.gravatar.com/avatar/#{Digest::MD5::hexdigest(email.strip.downcase)}"
+  end
 end

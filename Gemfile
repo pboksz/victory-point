@@ -9,7 +9,6 @@ gem 'debugger' # for debugging in rails
 gem 'devise' # for user authentication
 gem 'execjs' # javascript runtime
 gem 'jquery-rails' # jquery!
-gem 'paperclip' # for image uploading
 gem 'therubyracer' # javascript runtime
 gem 'thin' # or unicorn, passenger, etc
 gem 'underscore-rails' # underscore.js

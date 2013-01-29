@@ -1,5 +1,6 @@
 window.VP =
-  Models: {}
   Collections: {}
+  Lib: {}
+  Models: {}
   Views: {}
   Routers: {}

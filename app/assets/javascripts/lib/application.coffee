@@ -1,0 +1,1 @@
+class VP.Lib.Application
