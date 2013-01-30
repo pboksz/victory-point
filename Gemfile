@@ -9,12 +9,14 @@ gem 'debugger' # for debugging in rails
 gem 'devise' # for user authentication
 gem 'execjs' # javascript runtime
 gem 'jquery-rails' # jquery!
+gem 'json' # json!
 gem 'therubyracer' # javascript runtime
 gem 'thin' # or unicorn, passenger, etc
 gem 'underscore-rails' # underscore.js
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1' # for working with coffeescript
+  gem 'handlebars_assets' # for handlebars templates
   gem 'sass-rails',   '~> 3.2.3' # for working with scss files
   gem 'uglifier', '>= 1.0.3' # for js file compression
 end

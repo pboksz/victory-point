@@ -1,3 +1,6 @@
-<h1>Victory Point</h1>
+<h1>Loading...</h1>
 
-<%= link_to 'Login', new_user_session_path %>
+<%= javascript_tag do %>
+  VP.app = new VP.Lib.Application();
+  VP.app.startOnLoad();
+<% end %>
