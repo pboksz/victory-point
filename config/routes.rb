@@ -3,6 +3,14 @@ VictoryPoint::Application.routes.draw do
 
   root :to => 'home#index'
 
+  resources :home, :only => :index do
+    member do
+      post :login
+    end
+  end
+
+  resources :game, :only => [:index, :new, :create]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

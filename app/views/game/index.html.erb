@@ -1,0 +1,9 @@
+<h1>List of Games</h1>
+
+<ol>
+  <% @games.each do |game| %>
+    <li>Name: <%= game.name %> | Year: <%= game.year_published %></li>
+  <% end %>
+</ol>
+
+<%= link_to game_path %>
