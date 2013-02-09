@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :game do
-    name "MyString"
-    year_published 1
+    sequence(:name) { |n| "GameName#{n}" }
+    year_published 2012
   end
 end
