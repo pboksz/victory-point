@@ -1,9 +1,7 @@
-<h1>List of Games</h1>
+<h1>List of games in the database</h1>
 
 <ol>
   <% @games.each do |game| %>
     <li>Name: <%= game.name %> | Year: <%= game.year_published %></li>
   <% end %>
 </ol>
-
-<%= link_to 'Add game to your collection', new_game_path %>

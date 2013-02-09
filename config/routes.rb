@@ -9,7 +9,13 @@ VictoryPoint::Application.routes.draw do
     end
   end
 
-  resources :game, :only => [:index, :new, :create]
+  resources :game, :only => [:index]
+
+  resources :user_game do
+    member do
+      get :play
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

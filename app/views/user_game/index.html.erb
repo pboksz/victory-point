@@ -1,0 +1,15 @@
+<h1>List of your games</h1>
+
+<ol>
+  <% @games.each do |game| %>
+    <li>
+      Name: <%= game.name %> |
+      Year: <%= game.year_published %> |
+      <%= link_to 'Play', play_user_game_path(game) %> |
+      <%= link_to 'Edit', edit_user_game_path(game) %> |
+      <%= link_to 'Delete', user_game_path(game), :method => :destroy %>
+    </li>
+  <% end %>
+</ol>
+
+<%= link_to 'Add game to your collection', new_user_game_path %>
