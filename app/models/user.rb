@@ -12,9 +12,6 @@ class User < ActiveRecord::Base
   has_many :user_games, :dependent => :destroy
   has_many :games, :through => :user_games
 
-  validates :email, :password, :password_confirmation, :presence => true
-  validates :email, :uniqueness => true
-
   def gravatar_url
     "http://www.gravatar.com/avatar/#{Digest::MD5::hexdigest(email.strip.downcase)}"
   end

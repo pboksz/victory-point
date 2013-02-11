@@ -5,6 +5,6 @@ class UserGame < ActiveRecord::Base
   belongs_to :user
   belongs_to :game
 
-  validates :user, :game, :presence => true
-  validates :user, :uniqueness => { :scope => :game }
+  validates :user_id, :game_id, :presence => true
+  validates :user_id, :uniqueness => { :scope => :game_id }
 end
