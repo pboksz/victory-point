@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.6'
 gem 'mysql2'
 
-gem 'backbone-on-rails' # backbone.js
 gem 'bcrypt-ruby' # salting and hashing passwords
 gem 'debugger' # for debugging in rails
 gem 'devise' # for user authentication
