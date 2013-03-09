@@ -1,11 +1,7 @@
 class HomeController < ApplicationController
-  skip_before_filter :authenticate_user!, :only => :index
+  skip_before_filter :authenticate_user!
 
   def index
-
-  end
-
-  def login
 
   end
 end
