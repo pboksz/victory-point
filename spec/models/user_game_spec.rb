@@ -30,4 +30,16 @@ describe UserGame do
       end
     end
   end
+
+  describe 'delegates' do
+    let(:user_game) { create(:user_game) }
+
+    it 'name' do
+      user_game.name.should == user_game.game.name
+    end
+
+    it 'year_published' do
+      user_game.year_published.should == user_game.game.year_published
+    end
+  end
 end

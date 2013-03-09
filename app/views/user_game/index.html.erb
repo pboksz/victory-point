@@ -1,13 +1,13 @@
-<h1>List of your games</h1>
+<h1>List of games you have played</h1>
 
 <ol>
-  <% @games.each do |game| %>
+  <% @current_games.each do |game| %>
     <li>
       Name: <%= game.name %> |
-      Year: <%= game.year_published %> |
-      <%= link_to 'Play', play_user_game_path(game) %> |
-      <%= link_to 'Edit', edit_user_game_path(game) %> |
-      <%= link_to 'Delete', user_game_path(game), :method => :destroy %>
+      Year Published: <%= game.year_published %> |
+      Plays: <%=  game.play_count %> |
+      <%= link_to 'Play', new_user_game_game_play_path(game) %> |
+      <%= link_to 'Delete', user_game_path(game), :method => :delete, :data => { :confirm => 'Are you sure?' } %>
     </li>
   <% end %>
 </ol>
