@@ -26,7 +26,7 @@ Spork.prefork do
     #
     # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
     #
-    #config.mock_with :mocha
+    config.mock_with :mocha
     # config.mock_with :flexmock
     # config.mock_with :rr
 
@@ -57,6 +57,9 @@ Spork.prefork do
 
     # make output colorful
     config.color_enabled = true
+
+    # include devise helpers for controller specs
+    config.include Devise::TestHelpers, :type => :controller
 
     config.before(:suite) do
       DatabaseCleaner.strategy = :transaction

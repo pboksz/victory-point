@@ -13,5 +13,13 @@ describe GamePlay do
         end
       end
     end
+
+    describe 'played_at' do
+      context 'not present' do
+        it 'has error' do
+          build(:game_play, :played_at => '').should have(1).error_on(:played_at)
+        end
+      end
+    end
   end
 end
