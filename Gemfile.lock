@@ -106,7 +106,10 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.19)
+    mocha (0.13.3)
+      metaclass (~> 0.0.1)
     multi_json (1.5.0)
     mysql2 (0.3.11)
     net-scp (1.0.4)
@@ -167,6 +170,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    simple_form (2.1.0)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     spork (1.0.0rc3)
     spork-rails (3.2.1)
       rails (>= 3.0.0, < 3.3.0)
@@ -218,10 +224,12 @@ DEPENDENCIES
   jasminerice
   jquery-rails
   json
+  mocha
   mysql2
   rails (= 3.2.6)
   rspec-rails
   sass-rails (~> 3.2.3)
+  simple_form
   spork-rails
   therubyracer
   thin

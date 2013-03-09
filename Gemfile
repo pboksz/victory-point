@@ -9,6 +9,7 @@ gem 'devise' # for user authentication
 gem 'execjs' # javascript runtime
 gem 'jquery-rails' # jquery!
 gem 'json' # json!
+gem 'simple_form' # forms even easier
 gem 'therubyracer' # javascript runtime
 gem 'thin' # or unicorn, passenger, etc
 gem 'underscore-rails' # underscore.js
@@ -23,6 +24,7 @@ end
 group :test do
   gem 'capybara' # for integration specs that require interacting with rails views
   gem 'database_cleaner' # for clearing the database before and after specs
+  gem 'mocha', :require => false # stubbing library for Ruby
 end
 
 group :development do
