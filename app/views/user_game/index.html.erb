@@ -5,7 +5,7 @@
     <li>
       Name: <%= game.name %> |
       Year Published: <%= game.year_published %> |
-      Plays: <%=  game.play_count %> |
+      VP: <%=  game.play_count %> |
       <%= link_to 'Play', new_user_game_game_play_path(game) %> |
       <%= link_to 'Delete', user_game_path(game), :method => :delete, :data => { :confirm => 'Are you sure?' } %>
     </li>

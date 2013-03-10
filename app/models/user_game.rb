@@ -9,8 +9,4 @@ class UserGame < ActiveRecord::Base
 
   validates :user_id, :game_id, :presence => true
   validates :user_id, :uniqueness => { :scope => :game_id }
-
-  def play_count #TODO this should be counter cache
-    game_plays.try(:count)
-  end
 end
