@@ -1,0 +1,5 @@
+%h1 Add a new game
+
+= simple_form_for @game, :url => user_game_index_path do |f|
+  = f.input :game_id, :as => :select, :collection => @all_games, :include_blank => false
+  = f.submit

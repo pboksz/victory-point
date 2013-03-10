@@ -7,6 +7,8 @@ gem 'bcrypt-ruby' # salting and hashing passwords
 gem 'debugger' # for debugging in rails
 gem 'devise' # for user authentication
 gem 'execjs' # javascript runtime
+gem 'haml' # for haml templates
+gem 'haml-rails' # for haml rails
 gem 'jquery-rails' # jquery!
 gem 'json' # json!
 gem 'simple_form' # forms even easier

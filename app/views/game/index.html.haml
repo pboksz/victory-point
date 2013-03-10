@@ -1,0 +1,5 @@
+%h1 List of games in the database
+
+%ol
+  - @games.each do |game|
+    %li= "Name: #{game.name} | Year Published: #{game.year_published}"
