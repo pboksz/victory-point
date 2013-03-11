@@ -57,4 +57,24 @@ describe UserGame do
       end
     end
   end
+
+  describe 'scopes' do
+    describe '#order_by_played_at' do
+      subject { UserGame.order_by_plays }
+
+      context 'different play counts' do
+        let!(:user_game1) { create(:user_game, :play_count => 2) }
+        let!(:user_game2) { create(:user_game, :play_count => 5) }
+
+        it { should == [user_game2, user_game1] }
+      end
+
+      context 'tied play counts' do
+        let!(:user_game1) { create(:user_game, :play_count => 2, :updated_at => 1.week.ago) }
+        let!(:user_game2) { create(:user_game, :play_count => 2, :updated_at => Time.now) }
+
+        it { should == [user_game2, user_game1] }
+      end
+    end
+  end
 end
