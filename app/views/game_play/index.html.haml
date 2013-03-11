@@ -1,0 +1,15 @@
+%h1= "#{@current_game.name} plays"
+
+%table
+  %thead
+    %tr
+      %th Date
+      %th Number of Players
+  %tbody
+    - @game_plays.each do |play|
+      %tr
+        %td= play.played_at
+        %td= play.number_of_players
+
+.link_button= link_to 'Back', user_game_index_path, :method => :get
+

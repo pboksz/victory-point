@@ -6,7 +6,7 @@ VictoryPoint::Application.routes.draw do
   resources :home, :only => [:index]
   resources :game, :only => [:index]
   resources :user_game, :only => [:index, :new, :create, :destroy] do
-    resources :game_play, :only => [:new, :create]
+    resources :game_play, :only => [:index, :new, :create]
   end
 
   # The priority is based upon order of creation:
