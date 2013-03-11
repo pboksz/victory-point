@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
   def gravatar_url
     "http://www.gravatar.com/avatar/#{Digest::MD5::hexdigest(email.strip.downcase)}"
   end
+
+  def total_play_count
+    user_games.sum(&:play_count)
+  end
 end

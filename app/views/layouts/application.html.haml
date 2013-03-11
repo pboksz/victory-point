@@ -7,4 +7,10 @@
   = csrf_meta_tags
 
 %body
+
+- if user_signed_in?
+  .user_info
+    = "#{current_user.email} | Total VP: #{current_user.total_play_count} |"
+    .link_button= link_to 'Logout', destroy_user_session_path, :method => :delete
+
 = yield
