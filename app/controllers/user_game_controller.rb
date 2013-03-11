@@ -1,9 +1,8 @@
 class UserGameController < ApplicationController
   before_filter :get_current_games, :only => [:index, :new, :create]
-  before_filter :get_current_game, :only => [:destroy, :new_play, :create_play]
 
   def index
-
+    @current_games = @current_games.order_by_plays
   end
 
   def new
@@ -21,7 +20,7 @@ class UserGameController < ApplicationController
   end
 
   def destroy
-    @current_game.destroy
+    current_user.user_games.find(params[:id]).destroy
     redirect_to user_game_index_path
   end
 
@@ -29,9 +28,5 @@ class UserGameController < ApplicationController
 
   def get_current_games
     @current_games = current_user.user_games
-  end
-
-  def get_current_game
-    @current_game = current_user.user_games.find(params[:id])
   end
 end

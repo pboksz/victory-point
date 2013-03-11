@@ -3,7 +3,15 @@ require 'spec_helper'
 describe GamePlayController do
   let(:user) { create(:user) }
   let(:user_game) { create(:user_game, :user => user) }
+  let(:game_play) { create(:game_play, :user_game => user_game) }
   before { sign_in user }
+
+  describe '#index' do
+    before { get :index, :user_game_id => user_game.id }
+
+    it { assigns(:game_plays).should == [game_play] }
+    it { response.should render_template :index }
+  end
 
   describe '#new' do
     before { get :new, :user_game_id => user_game.id }

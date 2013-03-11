@@ -9,4 +9,6 @@ class UserGame < ActiveRecord::Base
 
   validates :user_id, :game_id, :presence => true
   validates :user_id, :uniqueness => { :scope => :game_id }
+
+  scope :order_by_plays, order('play_count DESC, updated_at DESC')
 end
