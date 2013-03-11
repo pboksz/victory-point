@@ -1,10 +1,21 @@
 %h1 List of games you have played
 
-%ol
-  - @current_games.each do |game|
-    %li
-      = "Name: #{game.name} | Year Published: #{game.year_published} | VP: #{game.play_count} | "
-      = link_to 'Play', new_user_game_game_play_path(game)
-      = link_to 'Delete', user_game_path(game), :method => :delete, :data => { :confirm => 'Are you sure?' }
+%table
+  %thead
+    %tr
+      %th Title
+      %th Year Published
+      %th Victory Points
+      %th Actions
+  %tbody
+    - @current_games.each do |game|
+      %tr
+        %td= game.name
+        %td= game.year_published
+        %td= game.play_count
+        %td
+          .link_button= link_to 'Play', new_user_game_game_play_path(game)
+          .link_button= link_to 'Info', user_game_game_play_index_path(game)
+          .link_button= link_to 'Delete', user_game_path(game), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-= link_to 'Add game to your collection', new_user_game_path
+.link_button= link_to 'Add game to your collection', new_user_game_path, :method => :get
