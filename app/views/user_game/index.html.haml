@@ -5,6 +5,7 @@
     %tr
       %th Title
       %th Year Published
+      %th Number of Players
       %th Victory Points
       %th Actions
   %tbody
@@ -12,6 +13,7 @@
       %tr
         %td= game.name
         %td= game.year_published
+        %td= game.player_range_string
         %td= game.play_count
         %td
           .link_button= link_to 'Play', new_user_game_game_play_path(game)

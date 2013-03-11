@@ -32,12 +32,22 @@ describe UserGame do
   end
 
   describe 'delegates' do
+    let(:game) { user_game.game }
+
     it 'name' do
-      user_game.name.should == user_game.game.name
+      user_game.name.should == game.name
     end
 
     it 'year_published' do
-      user_game.year_published.should == user_game.game.year_published
+      user_game.year_published.should == game.year_published
+    end
+
+    it 'player_range' do
+      user_game.player_range.should == (game.minimum_players..game.maximum_players)
+    end
+
+    it 'player_range_string' do
+      user_game.player_range_string.should == "#{game.minimum_players} - #{game.maximum_players}"
     end
   end
 

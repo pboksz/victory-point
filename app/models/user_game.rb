@@ -5,7 +5,7 @@ class UserGame < ActiveRecord::Base
   belongs_to :user
   belongs_to :game
 
-  delegate :name, :year_published, :to => :game
+  delegate :name, :year_published, :player_range, :player_range_string, :to => :game
 
   validates :user_id, :game_id, :presence => true
   validates :user_id, :uniqueness => { :scope => :game_id }
