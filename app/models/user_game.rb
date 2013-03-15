@@ -2,8 +2,10 @@ class UserGame < ActiveRecord::Base
   attr_accessible :game_id, :user_id
 
   has_many :game_plays, :dependent => :destroy
-  belongs_to :user
+  has_many :user_game_expansions, :dependent => :destroy
+
   belongs_to :game
+  belongs_to :user
 
   delegate :name, :year_published, :player_range, :player_range_string, :to => :game
 
