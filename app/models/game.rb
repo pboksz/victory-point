@@ -6,11 +6,13 @@ class Game < ActiveRecord::Base
   validates :name, :year_published, :minimum_players, :maximum_players, :presence => true
   validates :name, :uniqueness => true
 
-  def player_range
-    (minimum_players..maximum_players)
-  end
-
-  def player_range_string
-    "#{minimum_players} - #{maximum_players}"
+  def as_json
+    {
+      :id => id,
+      :name => name,
+      :year_published => year_published,
+      :minimum_players => minimum_players,
+      :maximum_players => maximum_players
+    }
   end
 end

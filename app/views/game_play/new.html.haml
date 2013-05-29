@@ -1,7 +1,0 @@
-%h1= "Play #{@current_game.name}"
-
-= simple_form_for [@current_game, @game_play], :url => user_game_game_play_index_path do |f|
-  = f.input :number_of_players, :as => :select, :collection => @current_game.player_range, :include_blank => false
-  = f.input :played_at, :as => :datetime, :default => Time.now
-  = f.submit
-  .link_button= link_to 'Cancel', user_game_index_path, :method => :get

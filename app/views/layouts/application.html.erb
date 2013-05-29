@@ -1,0 +1,22 @@
+<html ng-app="vp">
+  <head>
+    <title>VictoryPoint</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "#{Rails.root}/vendor/assets/javascripts/angular.min.js" %>
+    <%= javascript_include_tag "#{Rails.root}/vendor/assets/javascripts/angular-resource.min.js" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+      <div class="user_info">
+        <%= "#{current_user.email} | Total VP: #{current_user.total_play_count} |" %>
+        <div class="link_button">
+          <%= link_to 'Logout', destroy_user_session_path, :method => :delete%>
+        </div>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
