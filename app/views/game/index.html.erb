@@ -4,23 +4,21 @@
   <table>
     <thead>
     <tr>
-      <th>Id</th>
       <th>Title</th>
       <th>Year Published</th>
       <th>Min Players</th>
       <th>Max Players</th>
-      <th>Actions</th>
+      <th></th>
     </tr>
     </thead>
 
     <tbody>
     <tr ng-repeat="game in games">
-      <td>{{game.id}}</td>
       <td>{{game.name}}</td>
       <td>{{game.year_published}}</td>
       <td>{{game.minimum_players}}</td>
       <td>{{game.maximum_players}}</td>
-      <td><button remove="{{$index}}">remove</button></td>
+      <td><button ng-click="deleteGame($index)">remove</button></td>
     </tr>
     </tbody>
   </table>
@@ -30,5 +28,5 @@
   <input type="text" ng-model="newGame.year_published" placeholder="Year Published...">
   <input type="text" ng-model="newGame.minimum_players" placeholder="Minimum Players...">
   <input type="text" ng-model="newGame.maximum_players" placeholder="Maximum Players...">
-  <button ng-click="createGame()">Add Game</button>
+  <button ng-click="createGame()">Add New Game</button>
 </div>
