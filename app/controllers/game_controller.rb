@@ -3,7 +3,7 @@ class GameController < ApplicationController
     @games = Game.all
 
     respond_to do |format|
-      format.html
+      format.html # render normal html template
       format.json { render :json => @games.as_json }
     end
   end
@@ -12,6 +12,16 @@ class GameController < ApplicationController
     @game = Game.new(params[:game])
 
     if @game.save
+      render :json => @game.as_json
+    else
+      render :json => 'error'
+    end
+  end
+
+  def update
+    @game = Game.find(params[:id])
+
+    if @game.update_attributes(params[:game])
       render :json => @game.as_json
     else
       render :json => 'error'

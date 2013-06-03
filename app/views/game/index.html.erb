@@ -3,23 +3,26 @@
 <div ng-controller="GameCtrl">
   <table>
     <thead>
-    <tr>
-      <th>Title</th>
-      <th>Year Published</th>
-      <th>Min Players</th>
-      <th>Max Players</th>
-      <th></th>
-    </tr>
+      <tr>
+        <th>Title</th>
+        <th>Year Published</th>
+        <th>Min Players</th>
+        <th>Max Players</th>
+        <th>Actions</th>
+      </tr>
     </thead>
 
     <tbody>
-    <tr ng-repeat="game in games">
-      <td>{{game.name}}</td>
-      <td>{{game.year_published}}</td>
-      <td>{{game.minimum_players}}</td>
-      <td>{{game.maximum_players}}</td>
-      <td><button ng-click="deleteGame($index)">remove</button></td>
-    </tr>
+      <tr ng-repeat="game in games">
+        <td><input disabled data-type="name" value="{{game.name}}"></td>
+        <td><input disabled data-type="year_published" value="{{game.year_published}}"></td>
+        <td><input disabled data-type="minimum_players" value="{{game.minimum_players}}"></td>
+        <td><input disabled data-type="maximum_players" value="{{game.maximum_players}}"></td>
+        <td>
+          <button ng-click="updateGame($event, $index)">edit</button>
+          <button ng-click="deleteGame($index)">remove</button>
+        </td>
+      </tr>
     </tbody>
   </table>
 
