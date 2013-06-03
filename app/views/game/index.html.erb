@@ -1,6 +1,6 @@
 <h1>List of games in the database</h1>
 
-<div ng-controller="GameCtrl">
+<div class="games-table" ng-controller="GameCtrl">
   <table>
     <thead>
       <tr>
@@ -12,24 +12,40 @@
       </tr>
     </thead>
 
-    <tbody>
-      <tr ng-repeat="game in games">
+    <tbody class="games" ng-repeat="game in games">
+      <tr>
         <td><input disabled data-type="name" value="{{game.name}}"></td>
         <td><input disabled data-type="year_published" value="{{game.year_published}}"></td>
         <td><input disabled data-type="minimum_players" value="{{game.minimum_players}}"></td>
         <td><input disabled data-type="maximum_players" value="{{game.maximum_players}}"></td>
-        <td>
+        <td class="actions">
+          <button ng-click="updateGame($event, $index)">edit</button>
+          <button ng-click="deleteGame($index)">remove</button>
+        </td>
+      </tr>
+
+      <tr class="game-expansions" ng-repeat="expansion in game.game_expansions">
+        <td><input disabled data-type="name" value="{{expansion.name}}"></td>
+        <td><input disabled data-type="year_published" value="{{expansion.year_published}}"></td>
+        <td><input disabled data-type="minimum_players" value="{{expansion.minimum_players}}"></td>
+        <td><input disabled data-type="maximum_players" value="{{expansion.maximum_players}}"></td>
+        <td class="actions">
           <button ng-click="updateGame($event, $index)">edit</button>
           <button ng-click="deleteGame($index)">remove</button>
         </td>
       </tr>
     </tbody>
+
+    <tbody class="games">
+      <tr>
+        <td><input ng-model="newGame.name" placeholder="Name..."></td>
+        <td><input ng-model="newGame.year_published" placeholder="Year Published..."></td>
+        <td><input ng-model="newGame.minimum_players" placeholder="Minimum Players..."></td>
+        <td><input ng-model="newGame.maximum_players" placeholder="Maximum Players..."></td>
+        <td class="actions">
+          <button ng-click="createGame()">add new game</button>
+        </td>
+      </tr>
+    </tbody>
   </table>
-
-
-  <input type="text" ng-model="newGame.name" placeholder="Name...">
-  <input type="text" ng-model="newGame.year_published" placeholder="Year Published...">
-  <input type="text" ng-model="newGame.minimum_players" placeholder="Minimum Players...">
-  <input type="text" ng-model="newGame.maximum_players" placeholder="Maximum Players...">
-  <button ng-click="createGame()">Add New Game</button>
 </div>

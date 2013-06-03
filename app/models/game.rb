@@ -12,7 +12,8 @@ class Game < ActiveRecord::Base
       :name => name,
       :year_published => year_published,
       :minimum_players => minimum_players,
-      :maximum_players => maximum_players
+      :maximum_players => maximum_players,
+      :game_expansions => game_expansions.as_json
     }
   end
 end
