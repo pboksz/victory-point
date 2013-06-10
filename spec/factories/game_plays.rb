@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :game_play do
-    association(:user_game)
+    association(:user_games)
     number_of_players 1
     played_at Time.now
   end

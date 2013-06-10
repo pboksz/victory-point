@@ -18,8 +18,8 @@ describe User do
     end
 
     context 'user has user_games with play count' do
-      let!(:user_game1) { create(:user_game, :user => user, :play_count => 2) }
-      let!(:user_game2) { create(:user_game, :user => user, :play_count => 5) }
+      let!(:user_game1) { create(:user_games, :user => user, :play_count => 2) }
+      let!(:user_game2) { create(:user_games, :user => user, :play_count => 5) }
 
       it { should == 7 }
     end

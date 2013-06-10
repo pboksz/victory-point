@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe GamePlayController do
   let(:user) { create(:user) }
-  let(:user_game) { create(:user_game, :user => user) }
-  let(:game_play) { create(:game_play, :user_game => user_game) }
+  let(:user_games) { create(:user_games, :user => user) }
+  let(:game_play) { create(:game_play, :user_games => user_game) }
   before { sign_in user }
 
   describe '#index' do

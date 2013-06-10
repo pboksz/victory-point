@@ -1,4 +1,4 @@
-class GameExpansionController < ApplicationController
+class GameExpansionsController < ApplicationController
   before_filter :find_game
 
   def create

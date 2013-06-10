@@ -1,4 +1,4 @@
-class GameController < ApplicationController
+class GamesController < ApplicationController
   def index
     @games = Game.all
 
@@ -9,7 +9,7 @@ class GameController < ApplicationController
   end
 
   def create
-    @game = Game.new(params[:game])
+    @game = Game.new(params[:games])
 
     if @game.save
       render :json => @game.as_json
@@ -21,7 +21,7 @@ class GameController < ApplicationController
   def update
     @game = Game.find(params[:id])
 
-    if @game.update_attributes(params[:game])
+    if @game.update_attributes(params[:games])
       render :json => @game.as_json
     else
       render :json => 'error'

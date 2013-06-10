@@ -4,11 +4,11 @@ VictoryPoint::Application.routes.draw do
   root :to => 'home#index'
 
   resources :home, :only => [:index]
-  resources :game, :only => [:index, :create, :update, :destroy] do
-    resources :game_expansion, :only => [:index, :create, :update, :destroy]
+  resources :games, :only => [:index, :create, :update, :destroy] do
+    resources :game_expansions, :only => [:index, :create, :update, :destroy]
   end
-  resources :user_game, :only => [:index, :new, :create, :destroy] do
-    resources :game_play, :only => [:index, :new, :create]
+  resources :user_games, :only => [:index, :new, :create, :destroy] do
+    resources :game_plays, :only => [:index, :new, :create]
   end
 
   # The priority is based upon order of creation:

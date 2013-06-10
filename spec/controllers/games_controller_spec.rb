@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe GameController do
+describe GamesController do
   let(:user) { create(:user) }
   before { sign_in user }
 

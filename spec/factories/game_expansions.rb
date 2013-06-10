@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :game_expansion do
-    association(:game)
+    association(:games)
     name "GameExpansion"
     year_published 1996
     minimum_players 3

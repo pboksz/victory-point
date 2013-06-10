@@ -12,9 +12,9 @@
     <% if user_signed_in? %>
       <div class="user_info">
         <%= "#{current_user.email} | Total VP: #{current_user.total_play_count} |" %>
-        <div class="link_button">
+        <span class="link_button">
           <%= link_to 'Logout', destroy_user_session_path, :method => :delete%>
-        </div>
+        </span>
       </div>
     <% end %>
     <%= yield %>

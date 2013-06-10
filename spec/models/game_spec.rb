@@ -1,23 +1,23 @@
 require 'spec_helper'
 
 describe Game do
-  let(:game) { create(:game) }
+  let(:games) { create(:games) }
 
   describe 'validates' do
     it 'factory builds correctly' do
-      build(:game).should be_true
+      build(:games).should be_true
     end
 
     describe 'name' do
       context 'not present' do
         it 'has error' do
-          build(:game, :name => '').should have(1).error_on(:name)
+          build(:games, :name => '').should have(1).error_on(:name)
         end
       end
 
       context 'not unique' do
         it 'has error' do
-          build(:game, :name => game.name).should have(1).error_on(:name)
+          build(:games, :name => game.name).should have(1).error_on(:name)
         end
       end
     end
@@ -25,7 +25,7 @@ describe Game do
     describe 'year_published' do
       context 'not present' do
         it 'has error' do
-          build(:game, :year_published => '').should have(1).error_on(:year_published)
+          build(:games, :year_published => '').should have(1).error_on(:year_published)
         end
       end
     end
@@ -33,7 +33,7 @@ describe Game do
     describe 'minimum players' do
       context 'not present' do
         it 'has error' do
-          build(:game, :minimum_players => '').should have(1).error_on(:minimum_players)
+          build(:games, :minimum_players => '').should have(1).error_on(:minimum_players)
         end
       end
     end
@@ -41,7 +41,7 @@ describe Game do
     describe 'maximum players' do
       context 'not present' do
         it 'has error' do
-          build(:game, :maximum_players => '').should have(1).error_on(:maximum_players)
+          build(:games, :maximum_players => '').should have(1).error_on(:maximum_players)
         end
       end
     end
