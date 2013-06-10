@@ -1,0 +1,3 @@
+%div.wrap{ 'ng-controller' => 'GameCtrl' }
+  %ul.game-list
+    %li.game{ 'ng-repeat' => 'game in games' }= render 'user_games/game_profile'

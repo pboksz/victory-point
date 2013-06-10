@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :user_game_expansion do
     association(:game_expansion)
-    association(:user_game)
+    association(:user_games)
   end
 end

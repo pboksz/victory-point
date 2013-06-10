@@ -1,0 +1,24 @@
+%dl.game-profile
+  %dt.title
+    .name
+      %input{ 'readonly' => '', 'value' => '{{game.name}}' }
+    .actions
+      %i.icon-play
+
+  %dd.info
+    %dl.info-line
+      %dt.label Year Published
+      %dd.value
+        %input{ 'readonly' => '', 'value' => '{{game.year_published}}' }
+    %dl.info-line
+      %dt.label Minimum Players
+      %dd.value
+        %input{ 'readonly' => '', 'value' => '{{game.minimum_players}}' }
+    %dl.info-line
+      %dt.label Maximum Players
+      %dd.value
+        %input{ 'readonly' => '', 'value' => '{{game.maximum_players}}' }
+    %dl.info-line
+      %dt.label Number of Expansions
+      %dd.value
+        %input{ 'readonly' => '', 'value' => '{{game.game_expansions.length}}' }

@@ -25,7 +25,7 @@ describe UserGameExpansion do
 
       context 'not unique' do
         it 'has error' do
-          build(:user_game_expansion, :user_game => user_game_expansion.user_game, :game_expansion => user_game_expansion.game_expansion).should have(1).error_on(:user_game_id)
+          build(:user_game_expansion, :user_games => user_game_expansion.user_game, :game_expansion => user_game_expansion.game_expansion).should have(1).error_on(:user_game_id)
         end
       end
     end
