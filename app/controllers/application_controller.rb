@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   after_filter :set_csrf_cookie_for_angular
 
+  def authenticate_admin_user!
+    redirect_to root_path, :alert => 'Unauthorized!' unless authenticate_user! && current_user.admin?
+  end
+
   def set_csrf_cookie_for_angular
     cookies['XSRF-TOKEN'] = form_authenticity_token if protect_against_forgery?
   end

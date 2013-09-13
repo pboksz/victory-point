@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <% if user_signed_in? %>
       <div class="user_info">
         <%= "#{current_user.email} | Total VP: #{current_user.total_play_count} |" %>
@@ -17,6 +20,8 @@
         </span>
       </div>
     <% end %>
+
+
     <%= yield %>
   </body>
 </html>
