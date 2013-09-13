@@ -20,4 +20,5 @@
 
 # Other stuff to ignore
 database.yml
+unicorn.rb
 *~
