@@ -4,9 +4,6 @@ VictoryPoint::Application.routes.draw do
   root :to => 'home#index'
 
   resources :home, :only => [:index]
-  resources :games, :only => [:index, :create, :update, :destroy] do
-    resources :game_expansions, :only => [:index, :create, :update, :destroy]
-  end
   resources :user_games, :only => [:index, :new, :create, :destroy] do
     resources :game_plays, :only => [:index, :new, :create]
   end
