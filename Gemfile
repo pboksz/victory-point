@@ -6,7 +6,6 @@ gem 'mysql2'
 gem 'activeadmin', :github => 'gregbell/active_admin', :branch => 'rails4' # for easy admin panels
 gem 'devise' # for user authentication
 gem 'execjs' # javascript runtime
-gem 'font-awesome-rails' # font awesome for rails
 gem 'haml' # for haml templates
 gem 'haml-rails' # for haml rails
 gem 'jquery-rails' # jquery!
